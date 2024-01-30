@@ -28,7 +28,7 @@ var romanToInt = function(s) {
 
     }
 
-    for (var i = 0 ; i < numStr.length-1 ; i++){
+    for (var i = 0 ; i <= numStr.length-1 ; i++){
         if(numStr[i]<numStr[i+1]){
             int-=numStr[i]
         }else{
@@ -36,7 +36,7 @@ var romanToInt = function(s) {
         }
     }
 
-    int += numStr[numStr.length -1]
+  
 
 
     return int
@@ -45,6 +45,6 @@ var romanToInt = function(s) {
 
 };
 
-s = "III"
+s = "IIII"
 
 console.log(romanToInt(s))
