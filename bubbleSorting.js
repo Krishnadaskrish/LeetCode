@@ -12,7 +12,7 @@ function BubbleSorting (number){
 }
 
 const number = [0,0,1,1]
-const sortNumbers = console.log(BubbleSorting(number))
+const sortNumbers = console.log(BubbleSorting(number)) 
 
 
 function SortingString (string){

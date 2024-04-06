@@ -4,14 +4,14 @@ function twoSum (num,target) {
 
 
     for (let i = 0 ; i < num.length ; i++){
-        const complement = target - num[i] 
+        const complement = target - num[i]
+        console.log(complement,'sx')
 
         if(numIndices.has(complement)){
             return[numIndices.get(complement),i]
         }
 
       numIndices.set(num[i],i)
-      console.log(numIndices.set(num[i],i),'dfgh')
 
     }
     
