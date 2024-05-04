@@ -25,22 +25,53 @@
 
 <script>
 
-  function selectelement(element){
+  // function selectelement(element){
 
-    countselect = 0
-    for(let i = 0 ; i<element.options.select ; i ++){
-      countselect ++
-    }
+  //   let c = 3333
+  //   countselect = 0
+  //   for(let i = 0 ; i<element.options.select ; i ++){
+  //     countselect ++
+  //   }
 
       
-    }
+  //   }
 
-    const btn = document.getElementById('btn')
+  //   const btn = document.getElementById('btn')
 
-    btn.addEventListener("click",()=>{
-      const mic = document.selectForm.musicTypes
-      console.log(`you select the ${selectelement(mic)} option(s) `)
-    })
+  //   btn.addEventListener("click",()=>{
+  //     const mic = document.selectForm.musicTypes
+  //     console.log(`you select the ${selectelement(mic)} option(s) `)
+  //   })
+
+
+  //   function fetchDaata (){
+  //     const api = 'https://jsonplaceholder.typicode.com/users/1'
+  //     const data = new Promise((resolve,reject) =>{
+  //       fetch(api)
+  //       .then(responce=>{
+  //         if(!responce.ok){
+  //           reject(new Error('failed to fetch'))
+  //         }
+  //         return responce.json()
+
+  //       })
+  //       .then(useerData =>{
+  //         resolve(useerData)
+  //       })
+
+  //     })
+  //   }
+
+
+  const DataFetch = () => new promise ((resolve,reject)=>{
+    fetch('https://jsonplaceholder.typicode.com/users/1')
+    .then(responce => responce.ok ? resolve(responce.json()) : reject('faled to fetch'))
+    .catch(error=> reject(error))
+  })
+
+  DataFetch()
+  .then(userdata=>console.log(userdata))
+  .catch(error => console.error('Error fetching user data:', error));
 
   
 

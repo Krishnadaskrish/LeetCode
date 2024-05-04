@@ -1,25 +1,20 @@
-function isPaliandrome (x){
-
-    if (x < 0 || x % 10 === 0 && x !==0){
-        return false
-    }
-
-    let ogSrting = x 
-    let revString = 0
-
-    while(x > 0 ){
-
-        const digit = x % 10 ;
-        revString = revString * 10 + digit 
-        x = Math.floor(x/10)
-
-    }
-     
-    return ogSrting === revString
+var stack = [] 
+var word = 'racecar'
+var string = ''
 
 
+for( let i = 0 ; i <word.length ;i++){
+    stack.push(word[i])
 }
 
- const x = 121;
+for(let i = 0 ; i <word.length;i++){
+    string += stack.pop()
+}
 
-console.log(isPaliandrome(x))
+
+if(string === word){
+    console.log(true) 
+}else{
+    console.log(false) 
+}
+

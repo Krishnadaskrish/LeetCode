@@ -5,7 +5,6 @@
         for(let j = 0 ; i<arr.length-1-i; i ++){
             if(arr[i] != arr[j]){
                 unique = arr
-                console.log(object)
 
             }
         }
